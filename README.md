@@ -2,7 +2,7 @@
 ## Description
 Part of **ReWidgets** library to simplify account management with token authorization.
 ## Table of contents
-- [Note!](#note-)
+- [Note](#note-)
 - [ToDo List](#todo-list)
 - [Example](#example)
   * [Start Django server](#start-django-server)
