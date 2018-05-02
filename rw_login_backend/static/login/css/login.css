@@ -1,0 +1,74 @@
+#errMsg {
+    position: absolute;
+    padding: 10px;
+    width:296px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #f1211b;
+    color: #f2f2f2;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.form {
+    width: min-content;
+    overflow: hidden;
+    border: 3px solid #3c84e3;
+    padding: 10px;
+    background: #f6f6f6;
+    line-height: 30px;
+    box-shadow: 0 0 20px #545454;
+    user-select: none;
+}
+.left-bottom-angle {
+    border-radius: 10px 10px 10px 50px;
+}
+#loginForm {
+    opacity: 0;
+    transition: opacity .15s;
+}
+input {
+    border: 3px solid black;
+    outline: none;
+}
+input[type=submit] {
+    display: block;
+    margin: auto;
+    background: #00abff;
+    border: 3px solid #00abff;
+    padding: 3px;
+    font-size: 12pt;
+    font-weight: 700;
+    transition-property: border-color color background;
+    transition-duration: .1s;
+    cursor: pointer;
+}
+#showBtn {
+    display: inline;
+}
+input[type=submit]:hover {
+    border-color: black;
+}
+input[type=submit]:active {
+    color: white;
+    background: black;
+}
+input[type=text], input[type=password] {
+    font-size: 12pt;
+    padding: 3px;
+    transition: border-color .2s;
+}
+input[type=text]:focus, input[type=password]:focus {
+    border-color: #00abff;
+}
+.text-center {
+    text-align: center;
+}
+.indent {
+    height: 10px;
+}
+.ui-href {
+    color: #0090d7;
+    text-decoration: none;
+}

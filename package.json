@@ -1,0 +1,40 @@
+{
+  "name": "rw-login",
+  "version": "0.0.1",
+  "description": "RW.Login - part of ReWidgets library to simplify account management with token authorization.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --mode development --display-error-details",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "ReWidgets",
+    "RW.Login",
+    "RW",
+    "login",
+    "rw_login"
+  ],
+  "author": "br3w0r",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-2"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.1.2"
+  }
+}

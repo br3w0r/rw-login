@@ -1,0 +1,14 @@
+#loginSuccess {
+    position: absolute;
+    user-select: none;
+    font-family: sans-serif;
+    font-size: 38pt;
+    color: #0668dd;
+    height: min-content;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
