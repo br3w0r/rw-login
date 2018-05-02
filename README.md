@@ -11,6 +11,7 @@ Part of **ReWidgets** library to simplify account management with token authoriz
 This is a really raw version which lacks of functionallity and usability. For now, any changes could be made that break compatibility with other versions. I'll try to announce all of them in last changes section
 ## ToDo List
 - [x] Log in form
+- [ ] Get rid of react part
 - [ ] Sign up form
 - [ ] Forgot password form
 - [ ] Make convenient library look
