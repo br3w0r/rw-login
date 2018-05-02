@@ -5,9 +5,7 @@ Part of **ReWidgets** library to simplify account management with token authoriz
 - [Note](#note)
 - [ToDo List](#todo-list)
 - [Example](#example)
-    + [Windows cmd](#windows-cmd)
-    + [Ubuntu](#ubuntu)
-    + [Create user to login](#create-user-to-login)
+  * [Create user to login](#create-user-to-login)
   * [Done](#done)
 - [Usage](#usage)
 - [Help](#help)
@@ -33,7 +31,7 @@ py manage.py runserver
 ```bash
 python3 manage.py runserver
 ```
-#### Create user to login
+### Create user to login
 Server already has superuser with login **admin** and password **admin123**, but you can create your own one. Turn off the server by pressing **Ctrl+C** and execute this command:
 ```
 python3 (or "py" on Windows cmd) manage.py createsuperuser
