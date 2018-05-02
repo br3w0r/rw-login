@@ -10,7 +10,7 @@ Part of **ReWidgets** library to simplify account management with token authoriz
     + [Ubuntu](#ubuntu)
     + [Create user to login](#create-user-to-login)
 - [Usage](#usage)
-- [Want to help?](#want-to-help-)
+- [Help](#help)
 ## Note!
 This is a really raw version which lacks of functionallity and usability. For now, any changes could be made that break copatibility with other versions. I'll try to announce all of them in last changes section
 ## ToDo List
@@ -47,5 +47,5 @@ Now you can start the server and open example at [http://localhost:8000/login/](
 For now, the widget has few functions at src/actions directory:
 - **login(callback, creds)** - calls loginApi at src/Api/main.js, sends credentials (username and password) and talks with callback about success.
 - **loginHandler(token)** - simple handler which sends **LOGIN** action to loginReducer at src/Reducers/main.
-## Want to help?
+## Help
 Contact with me at <span style="color:blue">br3w0r-concepts@outlook.com</span> if you want to make ReWidgets better.
