@@ -11,6 +11,7 @@ Part of **ReWidgets** library to simplify account management with token authoriz
     + [Create user to login](#create-user-to-login)
 - [Usage](#usage)
 - [Help](#help)
+- [Done](#done)
 ## Note!
 This is a really raw version which lacks of functionallity and usability. For now, any changes could be made that break copatibility with other versions. I'll try to announce all of them in last changes section
 ## ToDo List
@@ -42,6 +43,7 @@ Turn off the server by pressing **Ctrl+C** and execute this command:
 ```
 python3 (or "py" on Windows cmd) manage.py createsuperuser
 ```
+### Done
 Now you can start the server and open example at [http://localhost:8000/login/](http://localhost:8000/login/)
 ## Usage
 For now, the widget has few functions at src/actions directory:
