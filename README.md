@@ -9,9 +9,9 @@ Part of **ReWidgets** library to simplify account management with token authoriz
     + [Windows cmd](#windows-cmd)
     + [Ubuntu](#ubuntu)
     + [Create user to login](#create-user-to-login)
+  * [Done](#done)
 - [Usage](#usage)
 - [Help](#help)
-- [Done](#done)
 ## Note!
 This is a really raw version which lacks of functionallity and usability. For now, any changes could be made that break copatibility with other versions. I'll try to announce all of them in last changes section
 ## ToDo List
