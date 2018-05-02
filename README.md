@@ -5,8 +5,6 @@ Part of **ReWidgets** library to simplify account management with token authoriz
 - [Note](#note)
 - [ToDo List](#todo-list)
 - [Example](#example)
-  * [Create user to login](#create-user-to-login)
-  * [Done](#done)
 - [Usage](#usage)
 - [Help](#help)
 ## Note
