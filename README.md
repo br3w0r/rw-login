@@ -5,7 +5,6 @@ Part of **ReWidgets** library to simplify account management with token authoriz
 - [Note](#note)
 - [ToDo List](#todo-list)
 - [Example](#example)
-  * [Start Django server](#start-django-server)
     + [Windows cmd](#windows-cmd)
     + [Ubuntu](#ubuntu)
     + [Create user to login](#create-user-to-login)
@@ -21,8 +20,6 @@ This is a really raw version which lacks of functionallity and usability. For no
 - [ ] Make convenient library look
 - [ ] Separate library and expamles
 ## Example
-rw-login comes with a little example to show how it works.
-### Start Django server
 Make sure that you installed **python>=3.4** and **requirements** with requirements.txt file in **rw_login_backend**:
 ```bash
 pip install -r requirements.txt
@@ -30,16 +27,14 @@ pip install -r requirements.txt
 Then, start djnago developer server:
 #### Windows cmd
 ```
-py manage.py migrate
 py manage.py runserver
 ```
 #### Ubuntu
 ```bash
-python3 manage.py migrate
 python3 manage.py runserver
 ```
 #### Create user to login
-Turn off the server by pressing **Ctrl+C** and execute this command:
+Server already has superuser with login **admin** and password **admin123**, but you can create your own one. Turn off the server by pressing **Ctrl+C** and execute this command:
 ```
 python3 (or "py" on Windows cmd) manage.py createsuperuser
 ```
