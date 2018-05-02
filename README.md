@@ -23,6 +23,18 @@ This is a really raw version which lacks of functionallity and usability. For no
 For now, the widget has few functions at src/actions directory:
 - **login(callback, creds)** - calls loginApi at src/Api/main.js, sends credentials (username and password) and talks with callback about success.
 - **loginHandler(token)** - simple handler which sends **LOGIN** action to loginReducer at src/Reducers/main.
+### Callback function
+This function is sent to the **login()** function to handle the login process:
+```javascript
+function callback(success, body={}) {
+  if (success) {
+    //handle if login success
+  } else {
+    //hendle if login fails
+  }
+}
+```
+As you can see, body argument isn't neccessary in case of failure.
 ## Example
 Make sure that you installed **python>=3.4** and **requirements** with requirements.txt file in **rw_login_backend**:
 ```bash
