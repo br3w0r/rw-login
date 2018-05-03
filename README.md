@@ -1,5 +1,4 @@
 # RW.Login
-## Description
 Part of **ReWidgets** library to simplify account management with token authorization.
 ## Table of contents
 - [Note](#note)
