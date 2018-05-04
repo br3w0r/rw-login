@@ -1,4 +1,4 @@
-export const loginApi = async (tokenAuthUrl, creds) => {
+export const loginApi = async (apiAuthUrl, creds) => {
     const fetchInit = {
         method: 'POST',
         headers: new Headers({
@@ -9,7 +9,7 @@ export const loginApi = async (tokenAuthUrl, creds) => {
             "password": creds.password
         })
     };
-    const response = await fetch(window.origin + tokenAuthUrl, fetchInit);
+    const response = await fetch(window.origin + apiAuthUrl, fetchInit);
     return {
         ok: response.ok,
         body: await response.json()
