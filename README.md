@@ -4,7 +4,7 @@ Part of **ReWidgets** library to simplify account management with token authoriz
 - [Note](#note)
 - [ToDo List](#todo-list)
 - [Usage](#usage)
-  * [Last look](#last-look)
+  * [Complete look](#complete-look)
 - [Latest changes](#latest-changes)
 - [Help](#help)
 ## Note
@@ -60,7 +60,7 @@ const fetchInit = {
 const response = await fetch(window.origin + apiAuthUrl, fetchInit);
 ```
 As you can see, it's **necessary** to use ```/``` in the first position of **apiAuthUrl** argument. It's also more safely to use ```/``` in the end, too.
-### Last look
+### Complete look
 ```javascript
 function callback(success, body={}) {
     if (success) {
