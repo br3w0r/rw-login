@@ -1,8 +1,12 @@
 {
   "name": "rw-login",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "RW.Login - part of ReWidgets library to simplify account management with token authorization.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/br3w0r/rw-login.git"
+  },
   "keywords": [
     "ReWidgets",
     "RW.Login",
