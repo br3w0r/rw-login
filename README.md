@@ -3,44 +3,84 @@ Part of **ReWidgets** library to simplify account management with token authoriz
 ## Table of contents
 - [Note](#note)
 - [ToDo List](#todo-list)
-- [Example](#example)
 - [Usage](#usage)
+  * [Complete look](#complete-look)
+- [Exapmle](#example)
 - [Latest changes](#latest-changes)
 - [Help](#help)
 ## Note
-This is a really raw version which lacks of functionallity and usability. For now, any changes could be made that break compatibility with other versions. I'll try to announce all of them in last changes section
+This is a really raw version which lacks of functionality and usability. For now, any changes could be made that break compatibility with other versions. I'll try to announce all of them in last changes section
 ## ToDo List
-- [x] Log in form
-- [ ] Sign up form
-- [ ] Forgot password form
+- [x] Log in functions
+- [ ] Sign up functions
+- [ ] Forgot password functions
 - [ ] Make convenient library look
-- [ ] Separate library and expamles
-## Example
-Make sure that you installed **python>=3.4** and **requirements** with requirements.txt file in **rw_login_backend**:
-```bash
-pip install -r requirements.txt
-```
-Then, start djnago developer server:
-#### Windows cmd
-```
-py manage.py runserver
-```
-#### Ubuntu
-```bash
-python3 manage.py runserver
-```
-### Create user to login
-Server already has superuser with login **admin** and password **admin123**, but you can create your own one. Turn off the server by pressing **Ctrl+C** and execute this command:
-```
-python3 (or "py" on Windows cmd) manage.py createsuperuser
-```
-### Done
-Now you can start the server and open example at [http://localhost:8000/login/](http://localhost:8000/login/)
+- [x] Separate library and expamles
 ## Usage
-For now, the widget has few functions at src/actions directory:
-- **login(callback, creds)** - calls loginApi at src/Api/main.js, sends credentials (username and password) and talks with callback about success.
-- **loginHandler(token)** - simple handler which sends **LOGIN** action to loginReducer at src/Reducers/main.
+### Installation
+Go to your dev directory and run:
+```
+npm i rw-login -D
+```
+It should install rw-login in ```node_modules``` folder.
+To import functions you need, simply declare it in .js file:
+```javascript
+import {login, loginHandler} from 'rw-login'
+```
+For now, the widget **needs to be built with bundling tool** (webpack is recommended) and has few functions at ```index.js```:
+### login(apiAuthUrl, callback, creds)
+Calls **loginApi(apiAuthUrl, creds)** at ```Api/main.js```, sends credentials (username and password) and talks with callback about success.
+If authorization succeed, **login()** sends ```{token: <token>}``` to callback as **body** argument.
+### loginHandler(token)
+Simple handler that sends ```{token: <token>}``` to **localStorage**
+### callback function
+This function must have **success** as first argument **without** default state and and **body with** default state:
+```javascript
+function callback(success, body={}) {
+    if (success) {
+        //Handle body as you want. The easiest way is shown below.
+        loginHandler(body.token);
+    } else {
+        //What to do if authorization failed.
+    }
+}
+```
+### loginApi(apiAuthUrl, creds)
+Uses credentials from **creds** argument and sends them in body of the **fetch** with POST method to ```window.origin + apiAuthUrl```:
+```javascript
+const fetchInit = {
+    method: 'POST',
+    headers: new Headers({
+        "Content-Type": "application/json"
+    }),
+    body: JSON.stringify({
+        "username": creds.username,
+        "password": creds.password
+    })
+};
+const response = await fetch(window.origin + apiAuthUrl, fetchInit);
+```
+As you can see, it's **necessary** to use ```/``` in the first position of **apiAuthUrl** argument. It's also more safely to use ```/``` in the end, too.
+### Complete look
+```javascript
+function callback(success, body={}) {
+    if (success) {
+        loginHandler(body.token);
+    } else {
+        console.log("FAILURE!");
+    }
+}
+
+const creds = {
+    username: "admin",
+    password: "admin123"
+}
+
+login("/token-auth/", callback, creds);
+```
+## Example
+You can see an example of working model on React at **[rw-login-example](https://github.com/br3w0r/rw-login-example)**
 ## Latest changes
-- Added conf.js support for ```src/Api/main.js```
+- Almost complete remake: lib look, examples are now separated to **[rw-login-example](https://github.com/br3w0r/rw-login-example)**.
 ## Help
 Contact with me at br3w0r-concepts@outlook.com if you want to make ReWidgets better.
