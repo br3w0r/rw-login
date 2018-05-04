@@ -5,6 +5,7 @@ Part of **ReWidgets** library to simplify account management with token authoriz
 - [ToDo List](#todo-list)
 - [Usage](#usage)
   * [Complete look](#complete-look)
+- [Exapmle](#example)
 - [Latest changes](#latest-changes)
 - [Help](#help)
 ## Note
@@ -77,6 +78,8 @@ const creds = {
 
 login("/token-auth/", callback, creds);
 ```
+## Example
+You can see an example of working model on React at **[rw-login-example](https://github.com/br3w0r/rw-login-example)**
 ## Latest changes
 - Almost complete remake: lib look, examples are now separated to **[rw-login-example](https://github.com/br3w0r/rw-login-example)**.
 ## Help
