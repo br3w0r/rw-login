@@ -10,9 +10,9 @@ Part of **ReWidgets** library to simplify account management with token authoriz
 ## Note
 This is a really raw version which lacks of functionality and usability. For now, any changes could be made that break compatibility with other versions. I'll try to announce all of them in last changes section
 ## ToDo List
-- [x] Log in form
-- [ ] Sign up form
-- [ ] Forgot password form
+- [x] Log in functions
+- [ ] Sign up functions
+- [ ] Forgot password functions
 - [ ] Make convenient library look
 - [x] Separate library and expamles
 ## Usage
