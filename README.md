@@ -4,6 +4,7 @@ Part of **ReWidgets** library to simplify account management with token authoriz
 - [Note](#note)
 - [ToDo List](#todo-list)
 - [Usage](#usage)
+  * [Last look](#last-look)
 - [Latest changes](#latest-changes)
 - [Help](#help)
 ## Note
@@ -58,14 +59,22 @@ const fetchInit = {
 };
 const response = await fetch(window.origin + apiAuthUrl, fetchInit);
 ```
-As you can see, it's **necessary** to use ```/``` in the first position of **apiAuthUrl** argument. It's also more safely to use ```/``` in the end, too:
+As you can see, it's **necessary** to use ```/``` in the first position of **apiAuthUrl** argument. It's also more safely to use ```/``` in the end, too.
+### Last look
 ```javascript
+function callback(success, body={}) {
+    if (success) {
+        loginHandler(body.token);
+    } else {
+        console.log("FAILURE!");
+    }
+}
+
 const creds = {
     username: "admin",
     password: "admin123"
 }
-loginApi("/token-auth/", creds);
-//or
+
 login("/token-auth/", callback, creds);
 ```
 ## Latest changes
